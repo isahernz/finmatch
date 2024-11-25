@@ -10,6 +10,7 @@ export default {
         primary: "#FF7B47",
         secondary: "#0D5C63",
         "gray-soft": "#737373",
+        balance: "#F3F3F3",
         normal: "#252B42",
       },
       fontFamily: {

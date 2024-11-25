@@ -1,8 +1,8 @@
 ---
+import Hero from "@components/Hero.astro";
+import Experience from "@components/Experience.astro";
 import "@fontsource-variable/montserrat";
-import Header from "@components/Header.astro";
-import Banner from "@components/Banner.astro";
-import Services from "@components/Services.astro";
+import People from "@components/People.astro";
 ---
 
 <html lang="en">
@@ -12,18 +12,12 @@ import Services from "@components/Services.astro";
     <meta name="viewport" content="width=device-width" />
     <title>Finmatch | Un servicio de contadores y asesores financieros</title>
   </head>
-  <div>
-    <div class="bg-hero-cover bg-cover w-full h-auto">
-      <div class="max-w-screen-lg mx-auto">
-        <Header />
-        <Banner />
-        <Services />
-      </div>
-    </div>
-
+  <body class="bg-balance">
+    <Hero />
+    <Experience />
+    <People />
     <main>
       <slot />
     </main>
-  </div>
-
+  </body>
 </html>

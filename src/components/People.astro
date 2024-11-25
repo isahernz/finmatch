@@ -1,0 +1,109 @@
+---
+import PersonCard from "./PersonCard.astro";
+
+const people = [
+  {
+    rol: "Asesor contable",
+    name: "Juan Perez",
+    image: "https://xsgames.co/randomusers/assets/avatars/male/75.jpg",
+    location: "Madrid",
+    experience: "⭐️⭐️⭐️⭐️⭐️",
+    description:
+      "Juan Perez es un ofrecedor de servicios financieros con experiencia en el mercado de contabilidad y contadores. Con su experiencia en el mercado, ha demostrado ser un experto en la gestión de contabilidad y contadores, y ha sido reconocido por su excelente trabajo y experiencia en el área. Además, ha trabajado en diferentes proyectos y proyectos de gestión contable y contadores, y ha logrado lograr un buen rendimiento en sus proyectos.",
+  },
+  {
+    rol: "Asesora fiscal",
+    name: "María Gómez",
+    image: "https://xsgames.co/randomusers/assets/avatars/female/65.jpg",
+    location: "Barcelona",
+    experience: "⭐️⭐️⭐️⭐️",
+    description:
+      "María Gómez cuenta con amplia experiencia en consultoría fiscal y tributaria. Ha asesorado a numerosas empresas para optimizar su gestión fiscal, ayudándolas a cumplir con las normativas vigentes y a mejorar sus finanzas.",
+  },
+  {
+    rol: "Analista financiero",
+    name: "Carlos López",
+    image: "https://xsgames.co/randomusers/assets/avatars/male/66.jpg",
+    location: "Valencia",
+    experience: "⭐️⭐️⭐️⭐️⭐️",
+    description:
+      "Carlos López es un profesional de las finanzas especializado en análisis financiero y presupuestario. Su capacidad para interpretar datos y proponer estrategias le ha permitido destacarse en proyectos clave dentro del sector.",
+  },
+  {
+    rol: "Consultora en auditoría",
+    name: "Ana Ruiz",
+    image: "https://xsgames.co/randomusers/assets/avatars/female/45.jpg",
+    location: "Sevilla",
+    experience: "⭐️⭐️⭐️⭐️",
+    description:
+      "Ana Ruiz tiene experiencia en la realización de auditorías internas y externas, garantizando el cumplimiento de las regulaciones financieras. Ha trabajado con empresas de diversos sectores, asegurando la transparencia y precisión en sus reportes.",
+  },
+  {
+    rol: "Gestor financiero",
+    name: "Pedro Sánchez",
+    image: "https://xsgames.co/randomusers/assets/avatars/male/80.jpg",
+    location: "Bilbao",
+    experience: "⭐️⭐️⭐️⭐️⭐️",
+    description:
+      "Pedro Sánchez es un gestor financiero con una sólida trayectoria ayudando a empresas a mejorar su gestión de capital y a desarrollar planes estratégicos de inversión. Es reconocido por su enfoque práctico y eficiente.",
+  },
+  {
+    rol: "Contadora pública",
+    name: "Laura Martínez",
+    image: "https://xsgames.co/randomusers/assets/avatars/female/50.jpg",
+    location: "Zaragoza",
+    experience: "⭐️⭐️⭐️⭐️",
+    description:
+      "Laura Martínez tiene una amplia experiencia en contabilidad y gestión financiera. Su meticulosidad y compromiso la convierten en una profesional confiable para empresas de todos los tamaños.",
+  },
+  {
+    rol: "Auditor senior",
+    name: "Fernando Torres",
+    image: "https://xsgames.co/randomusers/assets/avatars/male/62.jpg",
+    location: "Granada",
+    experience: "⭐️⭐️⭐️⭐️⭐️",
+    description:
+      "Fernando Torres es un auditor con vasta experiencia en revisiones de estados financieros y controles internos. Ha trabajado en auditorías para empresas internacionales, destacándose por su precisión y rigor.",
+  },
+  {
+    rol: "Consultora en impuestos",
+    name: "Lucía Fernández",
+    image: "https://xsgames.co/randomusers/assets/avatars/female/48.jpg",
+    location: "Málaga",
+    experience: "⭐️⭐️⭐️⭐️",
+    description:
+      "Lucía Fernández es especialista en planificación fiscal y gestión de impuestos. Ha ayudado a sus clientes a reducir costos fiscales sin comprometer el cumplimiento legal.",
+  },
+  {
+    rol: "Especialista en nóminas",
+    name: "Raúl García",
+    image: "https://xsgames.co/randomusers/assets/avatars/male/73.jpg",
+    location: "Santander",
+    experience: "⭐️⭐️⭐️⭐️⭐️",
+    description:
+      "Raúl García se especializa en la gestión de nóminas y recursos humanos, asegurando la correcta administración de los pagos y la conformidad con las leyes laborales.",
+  },
+  {
+    rol: "Consultora financiera",
+    name: "Carmen Delgado",
+    image: "https://xsgames.co/randomusers/assets/avatars/female/30.jpg",
+    location: "Murcia",
+    experience: "⭐️⭐️⭐️⭐️",
+    description:
+      "Carmen Delgado tiene experiencia en análisis financiero y asesoramiento estratégico, ayudando",
+  },
+];
+---
+
+<section class="py-10 px-6 max-w-screen-lg mx-auto">
+  <h2 class="text-blue-hard text-xl font-bold mb-6 text-center md:text-3xl">
+    Personas Físicas
+  </h2>
+  <p class="text-gray-soft text-sm text-center font-medium text-balance">
+    Ofrecedores de servicios financieros
+  </p>
+
+  <div class="flex gap-10 overflow-x-auto whitespace-nowrap mt-10">
+    {people.map((persona) => <PersonCard {...persona} />)}
+  </div>
+</section>
