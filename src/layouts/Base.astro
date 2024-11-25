@@ -1,0 +1,29 @@
+---
+import "@fontsource-variable/montserrat";
+import Header from "@components/Header.astro";
+import Banner from "@components/Banner.astro";
+import Services from "@components/Services.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/finmatch.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Finmatch | Un servicio de contadores y asesores financieros</title>
+  </head>
+  <div>
+    <div class="bg-hero-cover bg-cover w-full h-auto">
+      <div class="max-w-screen-lg mx-auto">
+        <Header />
+        <Banner />
+        <Services />
+      </div>
+    </div>
+
+    <main>
+      <slot />
+    </main>
+  </div>
+
+</html>

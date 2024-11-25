@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon/components";
+import Logo from "./Logo.astro";
+---
+
+<header>
+  <nav class="p-6 flex items-center justify-between xl:px-0">
+    <Logo />
+
+    <!-- Menú Hamburguesa -->
+    <div class="relative">
+      <input id="menu-toggle" type="checkbox" class="peer hidden" />
+      <label for="menu-toggle" class="block cursor-pointer lg:hidden">
+        <Icon name="menu" class="w-6 h-6" />
+      </label>
+
+      <!-- Menú -->
+      <ul
+        class="peer-checked:flex hidden absolute right-0 top-full mt-2 bg-white shadow-lg rounded-md lg:flex lg:static lg:mt-0 lg:shadow-none lg:bg-transparent lg:flex-row lg:space-x-6 lg:items-center"
+      >
+        <li>
+          <a
+            href="#"
+            class="block px-4 py-2 text-gray-800 hover:bg-gray-200 lg:hover:bg-transparent lg:px-0"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block px-4 py-2 text-gray-800 hover:bg-gray-200 lg:hover:bg-transparent lg:px-0"
+            >Servicios</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block px-4 py-2 text-gray-800 hover:bg-gray-200 lg:hover:bg-transparent lg:px-0"
+            >Sobre Nosotros</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block px-4 py-2 text-gray-800 hover:bg-gray-200 lg:hover:bg-transparent lg:px-0"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Links en pantallas grandes -->
+    <div class="hidden lg:flex space-x-6">
+      <a href="#" class="text-gray-800 hover:text-gray-600">Inicio</a>
+      <a href="#" class="text-gray-800 hover:text-gray-600">Servicios</a>
+      <a href="#" class="text-gray-800 hover:text-gray-600">Sobre Nosotros</a>
+      <a href="#" class="text-gray-800 hover:text-gray-600">Contacto</a>
+    </div>
+  </nav>
+</header>
